@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0B0D12;
+    --bg-secondary: #11141B;
+    --bg-elevated: #171B24;
+    --border-color: #272D39;
+    --text-primary: #F4F6FA;
+    --text-secondary: #A0A8B8;
+    --accent: #8B7CFF;
+    --accent-hover: #9E91FF;
+    --success: #36D399;
+    --warning: #F6C66A;
+    --error: #FB7185;
+    --terminal-bg: #090B10;
+  }
+
+  * {
+    border-color: var(--border-color);
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Geist", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  code, pre, kbd, .font-mono {
+    font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, Monaco, monospace;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0D12;
+}
+::-webkit-scrollbar-thumb {
+  background: #272D39;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B4252;
+}
+
+/* Terminal & Code styling */
+.terminal-window {
+  background: #090B10;
+  border: 1px solid #272D39;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.xterm {
+  padding: 12px;
+}
+
+.xterm .xterm-viewport {
+  background-color: #090B10 !important;
+}
+
+/* Glow & Accent Utilities */
+.accent-glow {
+  box-shadow: 0 0 20px rgba(139, 124, 255, 0.15);
+}
+
+.success-glow {
+  box-shadow: 0 0 20px rgba(54, 211, 153, 0.15);
+}
+
+/* Keyboard badge */
+.kbd-badge {
+  background: #171B24;
+  border: 1px solid #272D39;
+  color: #A0A8B8;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
